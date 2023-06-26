@@ -1,0 +1,42 @@
+:root{
+	font-size: 100%;
+}
+*::after, *::before, *{
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+body{
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+}
+.navbar{
+	width: 100vw;
+	height: 10vh;
+	background-color: hsl(145, 62%, 36%);
+	position: relative;
+	padding: 2.5% 1%;
+	box-shadow: 0px 20px 5px 7px rgba(0,0,0,0.2);
+}
+.navbar h1{
+	top: 50%;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	letter-spacing: .4rem;
+	font-size: 3rem;
+	color:hsl(145, 62%, 86%)
+}
+.main{
+	width: 100vw;
+	height: 100vh;
+	background-color:hsl(145, 62%, 92%);
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	padding: 3%;
+}
+.main .boxes{
+	border: 3px solid hsl(145, 62%, 20%);
+	height: 45%;
+	border-radius: 3%;
+}
