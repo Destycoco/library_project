@@ -9,34 +9,136 @@
 body{
 	font-family: 'Poppins', sans-serif;
 	box-sizing: border-box;
+	background-color:hsl(145, 62%, 92%); 
 }
 .navbar{
-	width: 100vw;
-	height: 10vh;
+	height: 12%;
 	background-color: hsl(145, 62%, 36%);
-	position: relative;
-	padding: 2.5% 1%;
+	/* padding: 20px 15px; */
 	box-shadow: 0px 20px 5px 7px rgba(0,0,0,0.2);
+	z-index: 100;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
+
 .navbar h1{
-	top: 50%;
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	letter-spacing: .4rem;
 	font-size: 3rem;
-	color:hsl(145, 62%, 86%)
+	color:hsl(145, 62%, 86%);
+	
+}
+.navbar .fa{
+	font-size: 3rem;
+	color: hsl(145, 62%, 96%)
 }
 .main{
 	width: 100vw;
 	height: 100vh;
-	background-color:hsl(145, 62%, 92%);
+	
 	display: grid;
 	grid-template-columns: repeat(3,1fr);
+	
 	padding: 3%;
+	gap: 3%;
+	row-gap: 7%;
+	margin-top: 5%;
+	background-size: cover;
+    padding-bottom: 5%;
+	
+	
 }
 .main .boxes{
-	border: 3px solid hsl(145, 62%, 20%);
-	height: 45%;
-	border-radius: 3%;
+	border-radius: 10px;
+	padding: 4%;
+	line-height: 1.7;
+	box-shadow: 0 0 8px 10px rgba(0,0,0,0.2);
+	padding-bottom: 5%;
+}
+.top-sec{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.top-sec h1{
+	font-size: 2.7rem;
+	font-weight: 600;
+	color:hsl(145, 62%, 25%);
+}
+.top-sec h2{
+	color:hsl(145, 62%, 25%);
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+.top-sec .page, .top-sec .pages{
+	font-size: 1.7rem;
+	color:hsl(145, 62%, 25%);
+}
+
+.boxes .horizontal-line{
+	margin-top: 5%;
+	margin-bottom: 3%;
+	border: 1px solid hsl(145, 62%, 25%);
+}
+button[class $= "btn"]{
+	width: 23%;
+	height: 18%;
+	margin: 1%;
+	font-size: 1.5rem;
+	background-color: hsl(145, 62%, 25%);
+	color:hsl(145, 62%, 98%);
+	border-radius: 8px;
+	cursor: pointer;
+}
+.boxes .del-btn{
+	background-color: red;
+	color: #fff
+}
+#pro-level{
+	font-size: 1.5rem;
+	color:hsl(145, 62%, 25%);
+}
+.aside{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 40%;
+	background-color: rgba(0,0,0,0.5);
+	min-height: 100vh;
+	backdrop-filter: blur(8px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 3;
+}
+ .aside-main{
+	width: 60%;
+	height: 70%;
+	background-color: hsl(145, 62%, 25%);
+    margin-top: 10%;
+	border-radius: 2rem;
+	
+
+}
+.footer{
+	width: 100vw;
+	background-color: rgba(18, 189, 67, 0.2);
+	
+	height: 6rem;
+	justify-content: center;
+	display: flex;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	margin-top: 60px;
+	z-index: 2;
+}
+.footer span{
+	font-size: 1.8rem;
+	color: hsl(145, 62%, 22%);
+	
 }
