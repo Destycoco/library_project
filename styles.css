@@ -33,15 +33,17 @@ body{
 }
 .navbar .fa{
 	font-size: 3rem;
-	color: hsl(145, 62%, 96%)
+	color: hsl(145, 62%, 96%);
+	cursor: pointer;
+}
+#menu2{
+	opacity: 0;
 }
 .main{
 	width: 100vw;
 	height: 100vh;
-	
 	display: grid;
 	grid-template-columns: repeat(3,1fr);
-	
 	padding: 3%;
 	gap: 3%;
 	row-gap: 7%;
@@ -102,10 +104,11 @@ button[class $= "btn"]{
 	font-size: 1.5rem;
 	color:hsl(145, 62%, 25%);
 }
+
 .aside{
 	position: fixed;
 	top: 0;
-	right: 0;
+	right: -40%;
 	width: 40%;
 	background-color: rgba(0,0,0,0.5);
 	min-height: 100vh;
@@ -115,6 +118,7 @@ button[class $= "btn"]{
 	justify-content: center;
 	z-index: 3;
 }
+
  .aside-main{
 	width: 60%;
 	height: 70%;
