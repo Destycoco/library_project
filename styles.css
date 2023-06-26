@@ -50,8 +50,6 @@ body{
 	margin-top: 5%;
 	background-size: cover;
     padding-bottom: 5%;
-	
-	
 }
 .main .boxes{
 	border-radius: 10px;
@@ -117,6 +115,7 @@ button[class $= "btn"]{
 	align-items: center;
 	justify-content: center;
 	z-index: 3;
+	transition: right 0.3s ease-in-out; 
 }
 
  .aside-main{
