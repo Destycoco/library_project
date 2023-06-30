@@ -10,6 +10,7 @@ body{
 	font-family: 'Poppins', sans-serif;
 	box-sizing: border-box;
 	background-color:hsl(145, 62%, 92%); 
+
 }
 .navbar{
 	height: 12%;
@@ -58,6 +59,7 @@ body{
 	line-height: 1.7;
 	box-shadow: 0 0 8px 10px rgba(0,0,0,0.2);
 	padding-bottom: 5%;
+	height: 400px;
 	
 }
 .top-sec{
@@ -106,10 +108,12 @@ button[class $= "btn"]{
 }
 
 .aside{
+	--number: 45%;
 	position: fixed;
 	top: 0;
-	right: -40%;
-	width: 40%;
+	/* right: -45%; */
+	right: calc(-1 * var(--number, 0));
+	width: calc(1 * var(--number, 0));
 	background-color: rgba(0,0,0,0.5);
 	min-height: 100vh;
 	backdrop-filter: blur(8px);
@@ -182,4 +186,150 @@ input[type="checkbox"]{
 	font-size: 1.8rem;
 	color: hsl(145, 62%, 22%);
 	
+}
+
+@media screen and (max-width: 2000px){
+	:root{
+		font-size: 75%;
+	}
+	.main{
+		row-gap: 25%;
+	}
+	.main .boxes{
+		height: 300px;
+	}
+}
+@media screen and (max-width: 1450px){
+	:root{
+		font-size: 70%;
+	}
+	.main{
+		grid-template-columns: 1fr 1fr;
+		width: 80vw;
+		justify-content: center;
+		margin: auto;
+		margin-top: 5%;
+		row-gap: 12%;
+	}
+}
+@media screen and (max-width: 1300px){
+	:root{
+		font-size: 68%;
+	}
+	.main{
+		margin-top: 7%;
+		row-gap: 12%;
+	}
+	.aside{
+		width: 50%;
+	}
+}
+@media screen and (max-width: 1280px){
+	.main .boxes{
+		height: 280px;
+	}
+	.main{
+		row-gap: 12%;
+	}
+}
+@media screen and (max-width: 1056px){
+	:root{
+		font-size: 60%;
+	}
+	.main{
+		row-gap: 20%;
+		margin-top: 10%;
+		width: 90%;
+	}
+	
+}
+@media screen and (max-width: 960px){
+	.main{
+		grid-template-columns: 1fr;
+		width: 60%;
+	}
+
+}
+@media screen and (max-width: 750px){
+	.main{
+		margin-top: 15%;
+	}
+	button[class $= "btn"]{
+		display: block;
+		width: 50%;
+		height: 15%;
+	}
+}
+@media screen and (max-width: 650px){
+	.main{
+		width: 80vw;
+	}
+
+	.main .boxes{
+		height: 330px;
+		
+	}
+	button[class $= "btn"]{
+		display: block;
+		width: 50%;
+		height: 15%;
+	}
+	.top-sec{
+		display: block;
+		justify-content: space-between;
+		align-items: center;
+		
+	}
+	.navbar{
+		display: flex;
+		flex-direction: column;
+	}
+}
+@media screen and (max-width: 590px){
+	.main{
+		width: 80vw;
+	}
+}
+@media screen and (max-width: 520px){
+	.main{
+		margin-top: 20%;
+	}
+
+	.main .boxes{
+		height: 300px;
+	}
+	.top-sec{
+		display: block;
+		justify-content: space-between;
+		align-items: center;
+		
+	}
+}
+
+@media screen and (max-width: 450px){
+	:root{
+		font-size: 55%;
+	}
+	.navbar{
+		height: 18%;
+	}
+	.main{
+		margin-top: 30%;
+	}
+	.main{
+		width: 80vw;
+	}
+}
+@media screen and (max-width: 370px){
+	.main{
+		margin-top: 40%;
+	}
+	.navbar h1{
+		letter-spacing: .25rem;
+		font-size: 2.6rem;
+		padding: .9rem;
+	}
+	.top-sec h1{
+		font-size: 2rem;
+	}
 }

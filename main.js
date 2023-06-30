@@ -11,17 +11,20 @@ const title_info = document.getElementById("title");
 const author_info = document.getElementById("author");
 const pages_info = document.getElementById("number");
 const callToAction = document.querySelector(".call-to-action");
-const stat = document.querySelector("#checkbox");
-const stats = Boolean(stat.checked);
+let stat = document.querySelector("#checkbox");
+const stats = Boolean(stat);
+
+
 
 
 function showMenu(){
      aside.style.right = "0%";
 }
 function hideMenu(){
-	aside.style.right = "-40%";
+	aside.style.setProperty("right", "-45%");
 }
 //Toggle Menu
+
 menu.addEventListener("click", ()=>{
 
 	if (menu.classList.contains("fa-bars")){
@@ -43,23 +46,34 @@ function Book(title, author, pages, status){
 	this.pages = pages;
 	this.status = status;
 } 
-
+// Book.prototype.showAction = function(){
+// 	if (this.status === true){
+// 		this.status = "read"
+// 	} else if(this.status === false){
+// 		this.status = "Not Read"
+// 	}
+	
+// }
 function addBooks(){
 	let bookTitle = title_info.value;
 	let bookAuthor = author_info.value;
 	let bookPages = pages_info.value;
 	let bookstatus = stats;
+	
 	let progressMessage;
-	if (bookstatus === true){
+	if (bookstatus === true && stat.checked){
 		bookstatus = "Read";
 		progressMessage = "Completed"
+		
 	}
 	else {
-		bookstatus = "Not Read"
+		bookstatus = "Not read"
 		progressMessage = "On progress"
 	}
 	let newBook = new Book(bookTitle, bookAuthor, bookPages, bookstatus);
 	library.push(newBook);
+	
+
 	
 	const newElement = document.createElement("div");
 	newElement.innerHTML = `<div class="boxes">
@@ -83,11 +97,26 @@ function addBooks(){
 }
 
 
-addBooks();
-addBooks();
-addBooks();
-addBooks();
-addBooks();
+// Form submission button 
+callToAction.addEventListener("click", (e)=>{
+	e.preventDefault();
+	addBooks();
+	if (menu.classList.contains("fa-times")){
+	menu.classList.remove("fa-times");
+	menu.classList.add("fa-bars");
+	hideMenu();
+	}
+		stat.checked = false;
+	
+const inputs = document.querySelectorAll("input")
+inputs.forEach((input) =>{
+	input.value = "";
+	});
+
+})
+console.log(library);
+	
+
 
 
 
