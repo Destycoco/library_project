@@ -284,6 +284,14 @@ input[type="checkbox"]{
 		display: flex;
 		flex-direction: column;
 	}
+
+	.aside{
+		--number: 100%;
+		position: fixed;
+		top: 0;
+		/* right: -45%; */
+		right: calc(-1 * var(--number, 0));
+		width: calc(1 * var(--number, 0));
 }
 @media screen and (max-width: 590px){
 	.main{

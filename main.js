@@ -17,10 +17,12 @@ const library = [];
 
 function showMenu() {
   aside.style.right = "0%";
+  aside.style.opacity = 1;
 }
 
 function hideMenu() {
   aside.style.setProperty("right", "-45%");
+  aside.style.opacity = 0;
 }
 
 //Toggle Menu
