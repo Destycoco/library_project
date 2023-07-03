@@ -248,6 +248,14 @@ input[type="checkbox"]{
 		grid-template-columns: 1fr;
 		width: 60%;
 	}
+	.aside{
+		--number: 70%;
+		position: fixed;
+		top: 0;
+		/* right: -45%; */
+		right: calc(-1 * var(--number, 0));
+		width: calc(1 * var(--number, 0));
+}
 
 }
 @media screen and (max-width: 750px){
@@ -259,6 +267,13 @@ input[type="checkbox"]{
 		width: 50%;
 		height: 15%;
 	}
+	.aside{
+		--number: 90%;
+		position: fixed;
+		top: 0;
+		/* right: -45%; */
+		right: calc(-1 * var(--number, 0));
+		width: calc(1 * var(--number, 0));
 }
 @media screen and (max-width: 650px){
 	.main{
